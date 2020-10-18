@@ -1,1 +1,1 @@
-gatsby-typescript-template
+# gatsby-typescript-template
