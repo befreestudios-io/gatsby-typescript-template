@@ -1,4 +1,3 @@
-/* eslint-disable implicit-arrow-linebreak */
 import Dimensions from '@/theme/constants/dimensions';
 
 /**

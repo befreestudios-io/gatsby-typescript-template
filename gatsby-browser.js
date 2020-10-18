@@ -1,11 +1,17 @@
 import React from 'react';
 import { AppMedia } from '@/utils/app-media';
-import { Global } from '@emotion/core';
+import { CacheProvider, Global } from '@emotion/core';
+import { ThemeProvider } from 'emotion-theming';
+import createCache from '@emotion/cache';
 import GlobalStyles from '@/theme/GlobalStyles.theme';
 import 'semantic-ui-css/semantic.min.css';
+import THEME from '@/theme/Theme';
 
 const mediaStyles = AppMedia.createMediaStyle();
 const { MediaContextProvider } = AppMedia;
+const BFS_CACHE = createCache({
+  key: 'bfs-cache',
+});
 
 // Logs when the client route changes
 export function onRouteUpdate({ location, prevLocation }) {
@@ -16,10 +22,14 @@ export function onRouteUpdate({ location, prevLocation }) {
 // Wraps every page in a component
 export function wrapPageElement({ element }) {
   return (
-    <MediaContextProvider>
-      <style>{mediaStyles}</style>
-      <Global styles={GlobalStyles} />
-      {element}
-    </MediaContextProvider>
+    <CacheProvider value={BFS_CACHE}>
+      <ThemeProvider theme={THEME}>
+        <MediaContextProvider>
+          <style>{mediaStyles}</style>
+          <Global styles={GlobalStyles} />
+          {element}
+        </MediaContextProvider>
+      </ThemeProvider>
+    </CacheProvider>
   );
 }

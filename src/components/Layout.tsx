@@ -1,8 +1,10 @@
 import React from 'react';
-import AppContainer from '@/components/container/Container.component';
+import ContainerStyles from '@/components/container/Container.styles';
 
 const Layout: React.FC = ({ children }): React.ReactElement => (
-  <AppContainer>{children}</AppContainer>
+  <ContainerStyles.AppContainer className="app-container">
+    {children}
+  </ContainerStyles.AppContainer>
 );
 
 export default Layout;

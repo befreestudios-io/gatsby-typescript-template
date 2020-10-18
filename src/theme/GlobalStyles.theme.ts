@@ -1,34 +1,34 @@
-import colors from '@/theme/constants/colors';
-import dimensions from '@/theme/constants/dimensions';
+import Colors from '@/theme/constants/colors';
+import Dimensions from '@/theme/constants/dimensions';
 
 export default `
-@font-face {
-  font-family: "Raleway-Regular";
-  src: url("../assets/fonts/Raleway-Regularr.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: "Raleway-Regular";
+    src: url("../assets/fonts/Raleway-Regularr.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: "Raleway-Black";
-  src: url("../assets/fonts/Raleway-Black.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: "Raleway-Black";
+    src: url("../assets/fonts/Raleway-Black.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: "Raleway-Italic";
-  src: url("../assets/fonts/Raleway-Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: "Raleway-Italic";
+    src: url("../assets/fonts/Raleway-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: "Montserrat-Regular";
-  src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
 
   @font-face {
     font-family: "Montserrat-Bold";
@@ -55,19 +55,15 @@ export default `
   }
 
   html {
-    font-size: ${dimensions.fontSizes.regular}px !important;
-    line-height: ${dimensions.lineHeights.regular} !important;
+    font-size: ${Dimensions.fontSizes.regular}px !important;
+    line-height: ${Dimensions.lineHeights.regular} !important;
   }
 
   body {
     width: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    background-color: ${colors.brand.nearBlack};
-    color: ${colors.brand.offWhite};
+    background-color: ${Colors.brand.nearBlack};
+    color: ${Colors.brand.offWhite};
     font-family: Montserrat-Regular;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
   }
 
   a {
@@ -77,12 +73,6 @@ export default `
     &:focus {
       text-decoration: underline;
     }
-  }
-
-  img {
-    max-width: 100%;
-    object-fit: contain;
-    position: relative;
   }
 
   figure {
@@ -96,7 +86,7 @@ export default `
   table {
     width: 100%;
     margin-bottom: 1rem;
-    border: 1px solid ${colors.ui.light};
+    border: 1px solid ${Colors.ui.light};
     font-size: 85%;
     border-collapse: collapse;
   }
@@ -104,7 +94,7 @@ export default `
   td,
   th {
     padding: .25rem .5rem;
-    border: 1px solid ${colors.ui.light};
+    border: 1px solid ${Colors.ui.light};
   }
 
   th {
@@ -115,10 +105,10 @@ export default `
     tr {
       &:nth-of-type(odd) {
         td {
-          background-color: ${colors.ui.whisper};
+          background-color: ${Colors.ui.whisper};
         }
         tr {
-          background-color: ${colors.ui.whisper};
+          background-color: ${Colors.ui.whisper};
         }
       }
     }
@@ -127,28 +117,28 @@ export default `
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.414rem;
     margin-bottom: .5rem;
-    color: ${colors.brand.offWhite};
+    color: ${Colors.brand.offWhite};
     font-weight: 900;
     font-family: Raleway-Black !important;
-    line-height: ${dimensions.lineHeights.heading};
+    line-height: ${Dimensions.lineHeights.heading};
     text-rendering: optimizeLegibility;
   }
 
   h1 {
     margin-top: 0;
-    font-size: ${dimensions.headingSizes.h1}rem;
+    font-size: ${Dimensions.headingSizes.h1}rem;
   }
 
   h2 {
-    font-size: ${dimensions.headingSizes.h2}rem;
+    font-size: ${Dimensions.headingSizes.h2}rem;
   }
 
   h3 {
-    font-size: ${dimensions.headingSizes.h3}rem;
+    font-size: ${Dimensions.headingSizes.h3}rem;
   }
 
   h4, h5, h6 {
-    font-size: ${dimensions.headingSizes.h4}rem;
+    font-size: ${Dimensions.headingSizes.h4}rem;
   }
 
   p {
@@ -179,15 +169,15 @@ export default `
     position: relative;
     margin: 1.5rem 0;
     border: 0;
-    border-top: 1px solid ${colors.ui.light};
+    border-top: 1px solid ${Colors.ui.light};
   }
 
   blockquote {
     margin: .8rem 0;
     padding: .5rem 1rem;
-    border-left: .25rem solid ${colors.brand.drabGreen};
-    color: ${colors.brand.nearBlack};
-    background-color: ${colors.ui.light};
+    border-left: .25rem solid ${Colors.brand.drabGreen};
+    color: ${Colors.brand.nearBlack};
+    background-color: ${Colors.ui.light};
 
     p {
       &:last-child {
