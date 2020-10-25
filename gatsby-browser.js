@@ -10,7 +10,7 @@ import THEME from '@/theme/Theme';
 const mediaStyles = AppMedia.createMediaStyle();
 const { MediaContextProvider } = AppMedia;
 const BFS_CACHE = createCache({
-  key: 'bfs-cache',
+  key: 'bfs-styled-component',
 });
 
 // Logs when the client route changes

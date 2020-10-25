@@ -1,4 +1,4 @@
-import { AppContainer_StyledComponent } from '@/components/container/Container.styles';
+import ContainerStyles from '@/components/container/Container.styles';
 import { AppMedia } from '@/utils/app-media';
 import React from 'react';
 
@@ -9,14 +9,14 @@ const AppContainer: React.FC = ({ ...props }): React.ReactElement => {
   return (
     <>
       <Media lessThan="tablet">
-        <AppContainer_StyledComponent className="mobile-container">
+        <ContainerStyles.AppContainer className="mobile-container">
           {children}
-        </AppContainer_StyledComponent>
+        </ContainerStyles.AppContainer>
       </Media>
       <Media greaterThanOrEqual="tablet">
-        <AppContainer_StyledComponent className="desktop-container">
+        <ContainerStyles.AppContainer className="desktop-container">
           {children}
-        </AppContainer_StyledComponent>
+        </ContainerStyles.AppContainer>
       </Media>
     </>
   );

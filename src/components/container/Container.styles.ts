@@ -1,12 +1,12 @@
 /* eslint-disable indent */
 /* eslint-disable implicit-arrow-linebreak */
 import styled from '@emotion/styled';
-import Mixins from '@/theme/utils/Mixins.utils';
 
 const AppContainer = styled.div`
   &.app-container {
-    ${(props: any): string => props.theme.utils.mixins.padY(20)};
-    ${(props: any): string => props.theme.utils.mixins.padX(20)};
+    /* Padding */
+    ${(props: any): string => props.theme.utils.mixins.padY(20)}
+    ${(props: any): string => props.theme.utils.mixins.padX(20)}
 
     margin: 0 auto;
 
@@ -32,9 +32,15 @@ const AppContainer = styled.div`
       &.cover-image {
         display: block;
         margin: 0 auto;
+
+        /* Box shadow Examples */
+        /* @todo: consider moving to theme */
         /* box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5); */
         /* box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.2); */
-        /* ${Mixins.getStyledBorder(8, '#000000')} */
+
+        /* Styled Border Example */
+        /* ${(props: any): string =>
+          props.theme.utils.mixins.getStyledBorder(8, '#000000')} */
       }
 
       &.chicago-flag {
